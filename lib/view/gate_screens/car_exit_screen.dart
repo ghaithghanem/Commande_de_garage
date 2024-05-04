@@ -12,7 +12,8 @@ class _CarExitScreenState extends State<CarExitScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: SingleChildScrollView(
+        child: Column(
         children: [
           Container(
             decoration: BoxDecoration(
@@ -178,6 +179,7 @@ class _CarExitScreenState extends State<CarExitScreen> {
           SizedBox(height: 20),
           // Add your other widgets here
         ],
+      ),
       ),
     );
   }

@@ -38,6 +38,7 @@ dependencies:
   get: ^4.3.8
   dio: ^4.0.0
   google_nav_bar: ^5.0.6
+  mqtt_client: ^10.2.1
 
 dev_dependencies:
   flutter_test:

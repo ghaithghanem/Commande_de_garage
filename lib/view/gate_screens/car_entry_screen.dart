@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mqtt_client/mqtt_client.dart';
+
+import '../../controller/mqttservice.dart';
+import 'package:typed_data/typed_data.dart' as typed;
+
 
 
 class CarEntryScreen extends StatefulWidget {
@@ -140,7 +145,12 @@ class _CarEntryScreenState extends State<CarEntryScreen> {
               height: 60.0,
               child: ElevatedButton(
                 onPressed: () {
-                  // Add onPressed functionality
+                  // Access MQTT client and publish message
+                  MqttService.publishMessage(
+                    'garage/door', // MQTT topic for opening the garage door
+                    MqttQos.exactlyOnce, // Quality of Service
+                    typed.Uint8Buffer()..addAll([1]), // Payload (1 for open command, you may adjust as needed)
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
