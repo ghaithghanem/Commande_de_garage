@@ -148,17 +148,73 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     height: 100,
                   ),
                   SizedBox(height: 20),
-                  Row(
+                  Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
 
-                      Switch(
-                        value: switchValue,
-                        onChanged: (value) {
-                          setState(() {
-                            switchValue = value;
-                          });
-                        },
+                      Container(
+                        width: 200.0,
+                        height: 60.0,
+                        child: ElevatedButton(
+                          onPressed: () {
+
+                          },
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(35.0),
+                            ),
+                            primary: Color(0xFF019602),
+                          ),
+                          child: Stack(
+                            alignment: Alignment.centerRight,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 0.0),
+                                child: Text(
+                                  'Ouvrir',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 22,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(height: 20),
+                      Container(
+                        width: 200.0,
+                        height: 60.0,
+                        child: ElevatedButton(
+                          onPressed: () {
+
+                          },
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(35.0),
+                            ),
+                            primary: Color(0xFFB70202),
+                          ),
+                          child: Stack(
+                            alignment: Alignment.centerRight,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 0.0),
+                                child: Text(
+                                  'Fermer',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 22,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),
